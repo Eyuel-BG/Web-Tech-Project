@@ -1,0 +1,357 @@
+/* =====================================================
+   MKS - ANIMATIONS & SCROLL EFFECTS
+   File 7 of 8: css/animations.css
+   ===================================================== */
+
+/* ---- Keyframes ---- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.88);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes skewIn {
+    from {
+        opacity: 0;
+        transform: skewX(-8deg) translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: skewX(0deg) translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(182, 149, 28, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 12px rgba(182, 149, 28, 0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px) skewY(-1deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) skewY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ---- Scroll-triggered base state (hidden) ---- */
+.anim {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.anim.fade-up {
+    transform: translateY(50px);
+}
+
+.anim.fade-left {
+    transform: translateX(-50px);
+}
+
+.anim.fade-right {
+    transform: translateX(50px);
+}
+
+.anim.scale-in {
+    transform: scale(0.88);
+}
+
+.anim.skew-in {
+    transform: skewX(-6deg) translateX(-30px);
+}
+
+/* Stagger delays */
+.anim.d1 {
+    transition-delay: 0.1s;
+}
+
+.anim.d2 {
+    transition-delay: 0.2s;
+}
+
+.anim.d3 {
+    transition-delay: 0.3s;
+}
+
+.anim.d4 {
+    transition-delay: 0.4s;
+}
+
+.anim.d5 {
+    transition-delay: 0.5s;
+}
+
+/* ---- Triggered state (visible) ---- */
+.anim.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---- Hero entrance ---- */
+.hero-content h1 {
+    animation: heroSlide 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-content p {
+    animation: heroSlide 0.8s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-content .hero-btns {
+    animation: heroSlide 0.8s 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---- Service icon pulse on hover ---- */
+.service-icon {
+    animation: none;
+}
+
+.service-card:hover .service-icon {
+    animation: pulse 1.2s ease infinite;
+}
+
+/* ---- Gold shimmer on section title underline ---- */
+.section-title::after {
+    background: linear-gradient(90deg, var(--gold), #f0c040, var(--gold));
+    background-size: 200% auto;
+    animation: shimmer 2.5s linear infinite;
+}
+
+/* ---- Skewed divider between sections ---- */
+.skew-divider {
+    position: relative;
+    z-index: 1;
+}
+
+.skew-divider::before {
+    content: '';
+    position: absolute;
+    top: -36px;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: inherit;
+    transform: skewY(-2deg);
+    z-index: -1;
+}
+
+/* ---- Stat counters ---- */
+.stat-item {
+    animation: countUp 0.7s ease both;
+}
+
+.stat-item:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.stat-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stat-item:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+/* ---- Card hover transform ---- */
+.prod-card,
+.service-card,
+.training-card,
+.value-card,
+.why-card,
+.mv-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s ease;
+}
+
+.prod-card:hover,
+.training-card:hover,
+.service-card:hover,
+.why-card:hover,
+.value-card:hover {
+    transform: translateY(-5px);
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+/* Page banner accent is defined in style.css */
+
+/* ---- Btn ripple ---- */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.btn:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* ---- Nav link underline slide ---- */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+    border-radius: 2px;
+}
+
+.nav-link:hover::before,
+.nav-link.current::before {
+    transform: scaleX(1);
+}
+
+/* ---- Product filter active ---- */
+.filter-btn {
+    transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.filter-btn.active {
+    transform: scale(1.06);
+}
+
+/* ---- Image hover zoom (product rows) ---- */
+.product-card.image-cell {
+    overflow: hidden;
+}
+
+.product-card.image-cell img {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card.image-cell:hover img {
+    transform: scale(1.07);
+}
+
+/* ---- Reduce motion ---- */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .anim {
+        opacity: 1;
+        transform: none;
+    }
+}
