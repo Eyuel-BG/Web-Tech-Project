@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Mentor Knowledge Solutions</title>
+    <link rel="icon" href="https://mksaddis.com/wp-content/uploads/2023/02/cropped-logo-1-e1678093251351-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+    <header class="site-header" id="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="site-logo"><img src="assets/images/logo.png" alt="MKS" /></a>
+            <button class="menu-toggle"><span></span><span></span><span></span></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item has-dropdown"><span class="nav-link">Our Products</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html#cats">CATS</a></li>
+                            <li><a href="products.html#ecom">eCOM</a></li>
+                            <li><a href="products.html#efom">eFOM</a></li>
+                            <li><a href="products.html#maveko">Data Outsourcing</a></li>
+                            <li><a href="products.html#sis">SIS</a></li>
+                            <li><a href="products.html#rmcare">rmCare</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown"><span class="nav-link">Our Services</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#consulting">Management Consultancy</a></li>
+                            <li><a href="services.html#training">Workshops, Seminars and Trainings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb"><a href="index.html">Home</a><span>&rsaquo;</span><span>Contact Us</span></div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="anim fade-left">
+                    <span class="section-label">Reach Out</span>
+                    <h2 style="margin-bottom:28px;">Get In Touch</h2>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ci-text">
+                            <h5>Our Location</h5><a href="https://maps.app.goo.gl/9HkJaiKec232Yn8YA"
+                                target="_blank">Bole, Adika Building, 3rd Floor<br>Addis Ababa, Ethiopia</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                        <div class="ci-text">
+                            <h5>Phone Number</h5><a href="tel:+251930288790">+251 930 288 790</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="ci-text">
+                            <h5>Email Address</h5><a href="mailto:info@mksaddis.com">info@mksaddis.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="anim fade-right">
+                    <span class="section-label">Send a Message</span>
+                    <h2 style="margin-bottom:28px;">How Can We Help?</h2>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control"
+                                    placeholder="First name" required />
+                                <span class="error-msg">Required.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control"
+                                    placeholder="Last name" required />
+                                <span class="error-msg">Required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="your@email.com" required />
+                            <span class="error-msg">Please enter a valid email.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Topic</label>
+                            <select id="subject" name="subject" class="form-control">
+                                <option value="">Select a topic…</option>
+                                <option>IT and Management Consulting</option>
+                                <option>Custom Application Development</option>
+                                <option>CATS Inquiry</option>
+                                <option>eFOM Inquiry</option>
+                                <option>eCOM Inquiry</option>
+                                <option>rmCare Inquiry</option>
+                                <option>SIS Inquiry</option>
+                                <option>Data Outsourcing (MAVEKO)</option>
+                                <option>Workshops &amp; Trainings</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5"
+                                placeholder="Write your message here…" required></textarea>
+                            <span class="error-msg">Required.</span>
+                        </div>
+                        <button type="submit" class="btn btn-gold"
+                            style="width:100%;justify-content:center;font-size:0.95rem;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-wrapper anim fade-up" style="margin-top:60px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.535707040584!2d38.78179231475424!3d8.983906793533985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85e8a9b8b527%3A0x8e7b1e4a5d7a3f1c!2sBole%2C%20Addis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2set!4v1680080577342!5m2!1sen!2set"
+                    allowfullscreen loading="lazy" title="MKS Office Location"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><img src="assets/images/logo-footer.png" alt="MKS logo" /></div>
+                    <h4>About</h4>
+                    <p>Mentor Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in
+                        the business of making organizations perform better.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html#consulting">Management Consultancy</a></li>
+                        <li><a href="services.html#training">Workshops &amp; Trainings</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html#cats">CATS</a></li>
+                        <li><a href="products.html#efom">eFOM</a></li>
+                        <li><a href="products.html#ecom">eCOM</a></li>
+                        <li><a href="products.html#maveko">Data Outsourcing</a></li>
+                        <li><a href="products.html#sis">SIS</a></li>
+                        <li><a href="products.html#rmcare">rmCare</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Let's Connect!</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/9HkJaiKec232Yn8YA"><i class="fas fa-map-marker-alt"
+                                    style="color:var(--gold);margin-right:6px;"></i>Bole, Adika Bldg 3rd Floor</a></li>
+                        <li><a href="tel:+251930288790"><i class="fas fa-phone"
+                                    style="color:var(--gold);margin-right:6px;"></i>+251 930 288 790</a></li>
+                        <li><a href="mailto:info@mksaddis.com"><i class="fas fa-envelope"
+                                    style="color:var(--gold);margin-right:6px;"></i>info@mksaddis.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright &copy; 2026 Mentor Knowledge Solutions</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
